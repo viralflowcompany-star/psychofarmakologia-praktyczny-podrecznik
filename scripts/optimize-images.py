@@ -55,7 +55,7 @@ def border_connected_mask(image: Image.Image, min_luma: int, max_chroma: int) ->
     return alpha.filter(ImageFilter.GaussianBlur(0.65))
 
 
-def transparent_mockup(source: Path, output_stem: str, min_luma: int, max_chroma: int, widths: tuple[int, int]) -> None:
+def transparent_mockup(source: Path, output_stem: str, min_luma: int, max_chroma: int, widths: tuple[int, int], method: int = 6) -> None:
     source_image = Image.open(source).convert("RGBA")
     alpha = border_connected_mask(source_image, min_luma, max_chroma)
     source_image.putalpha(alpha)
@@ -77,7 +77,7 @@ def transparent_mockup(source: Path, output_stem: str, min_luma: int, max_chroma
         height = round(source_image.height * width / source_image.width)
         resized = source_image.resize((width, height), Image.Resampling.LANCZOS)
         output = IMAGES / f"{output_stem}-{width}.webp"
-        resized.save(output, "WEBP", quality=82, method=6, exact=True)
+        resized.save(output, "WEBP", quality=82, method=method, exact=True)
 
 
 def transparent_device_mockup(source: Path, output_stem: str, widths: tuple[int, int]) -> None:
@@ -201,6 +201,22 @@ transparent_book_mockup(
     IMAGES / "mockup-livro-capa-pl-source.png",
     "mockup-livro-capa-pl-transparente",
     widths=(560, 900),
+)
+transparent_mockup(
+    IMAGES / "hero-psychofarmakologia-pl-source.png",
+    "hero-psychofarmakologia-pl-transparente",
+    min_luma=235,
+    max_chroma=18,
+    widths=(720, 1200),
+    method=4,
+)
+transparent_mockup(
+    IMAGES / "hero-psychofarmakologia-mobile-pl-source.png",
+    "hero-psychofarmakologia-mobile-pl-transparente",
+    min_luma=235,
+    max_chroma=18,
+    widths=(700,),
+    method=4,
 )
 optimize_pages()
 optimize_social_preview()
