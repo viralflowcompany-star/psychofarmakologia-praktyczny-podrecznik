@@ -10,7 +10,7 @@
 - Produkt fizyczny, wysyłka i raty: brak.
 - Mockup zamiast VSL: polska okładka odtworzona na podstawie referencji.
 - Mockupy referencyjne: przetłumaczona rozkładówka sertraliny oraz 12 polskich podglądów stron w układzie 4×3.
-- Rozmowy WhatsApp: 3 responsywne makiety, oznaczone jako przykłady wymagające autoryzowanych opinii przed publikacją.
+- Rozmowy WhatsApp: 3 realistyczne, responsywne makiety z naturalną sekwencją wiadomości, polskimi nazwiskami i syntetycznymi zdjęciami profilowymi; wyraźnie oznaczone jako demonstracje wymagające autoryzowanych opinii przed kampanią.
 - Lista treści: 11 grup i 62 zweryfikowane wpisy nomenklaturowe.
 - Kierunek wizualny: przebudowany zgodnie z referencją `interpretarexames.com/abm/prescricaopsi/` — białe tło, centralny mockup, kompaktowa oferta, falisty separator, zielone nagłówki, siatka stron, trzykolumnowy spis treści i jasna sekcja opinii.
 
@@ -18,6 +18,7 @@
 
 - Desktop 1265×900: brak poziomego przepełnienia; okładka, rozkładówka i 12 przetłumaczonych stron są załadowane.
 - Mobile 390×844: brak poziomego przepełnienia; wszystkie obrazy są załadowane, a podglądy stron układają się responsywnie.
+- Makiety rozmów: po 4 wiadomości, osobne godziny/statusy, 3 poprawnie załadowane awatary; brak błędów konsoli.
 - CTA główne: klikalne; pokazuje lokalny komunikat o przyszłej integracji płatności.
 - Wszystkie odnośniki sprzedażowe są kotwicami wewnętrznymi; brak zewnętrznego checkoutu i trackerów.
 - Konsola: 0 błędów w teście.
