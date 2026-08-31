@@ -121,6 +121,47 @@ def transparent_device_mockup(source: Path, output_stem: str, widths: tuple[int,
         resized.save(IMAGES / f"{output_stem}-{target_width}.webp", "WEBP", quality=82, method=6, exact=True)
 
 
+def transparent_book_mockup(source: Path, output_stem: str, widths: tuple[int, int]) -> None:
+    source_image = Image.open(source).convert("RGBA")
+    image = cv2.cvtColor(np.array(source_image.convert("RGB")), cv2.COLOR_RGB2BGR)
+    height, width = image.shape[:2]
+    mask = np.full((height, width), cv2.GC_BGD, dtype=np.uint8)
+    rectangle = (
+        round(width * 0.035),
+        round(height * 0.018),
+        round(width * 0.93),
+        round(height * 0.955),
+    )
+    background_model = np.zeros((1, 65), np.float64)
+    foreground_model = np.zeros((1, 65), np.float64)
+    cv2.grabCut(image, mask, rectangle, background_model, foreground_model, 8, cv2.GC_INIT_WITH_RECT)
+    foreground = np.where(
+        (mask == cv2.GC_FGD) | (mask == cv2.GC_PR_FGD),
+        255,
+        0,
+    ).astype("uint8")
+    foreground = cv2.morphologyEx(foreground, cv2.MORPH_CLOSE, np.ones((3, 3), np.uint8))
+    alpha = Image.fromarray(foreground, mode="L").filter(ImageFilter.GaussianBlur(0.7))
+    source_image.putalpha(alpha)
+
+    bbox = alpha.point(lambda value: 255 if value > 8 else 0).getbbox()
+    if not bbox:
+        raise RuntimeError(f"No foreground found in {source}")
+    left, top, right, bottom = bbox
+    padding = 10
+    source_image = source_image.crop((
+        max(0, left - padding),
+        max(0, top - padding),
+        min(source_image.width, right + padding),
+        min(source_image.height, bottom + padding),
+    ))
+
+    for target_width in widths:
+        target_height = round(source_image.height * target_width / source_image.width)
+        resized = source_image.resize((target_width, target_height), Image.Resampling.LANCZOS)
+        resized.save(IMAGES / f"{output_stem}-{target_width}.webp", "WEBP", quality=84, method=6, exact=True)
+
+
 def optimize_pages() -> None:
     pages = IMAGES / "strony"
     for source in sorted(pages.glob("page-*.png")):
@@ -155,6 +196,11 @@ transparent_mockup(
     min_luma=242,
     max_chroma=22,
     widths=(700, 1100),
+)
+transparent_book_mockup(
+    IMAGES / "mockup-livro-capa-pl-source.png",
+    "mockup-livro-capa-pl-transparente",
+    widths=(560, 900),
 )
 optimize_pages()
 optimize_social_preview()

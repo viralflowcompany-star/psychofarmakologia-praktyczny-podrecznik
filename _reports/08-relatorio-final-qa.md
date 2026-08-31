@@ -8,7 +8,7 @@
 - Cena: wyłącznie `97 zł`.
 - Gwarancja: wyłącznie 30 dni.
 - Produkt fizyczny, wysyłka i raty: brak.
-- Mockup zamiast VSL: responsywny zestaw urządzeń z polskim podręcznikiem, wycięty na rzeczywistym przezroczystym tle.
+- Mockup zamiast VSL: realistyczny, zamknięty tom w twardej oprawie z właściwą polską okładką, wycięty na rzeczywistym przezroczystym tle.
 - Mockupy referencyjne: przezroczysta, przetłumaczona rozkładówka sertraliny oraz 12 polskich podglądów stron w układzie 4×3.
 - Rozmowy WhatsApp: 3 realistyczne, responsywne makiety z naturalną sekwencją wiadomości, polskimi nazwiskami i syntetycznymi zdjęciami profilowymi; wyraźnie oznaczone jako demonstracje wymagające autoryzowanych opinii przed kampanią.
 - Lista treści: 11 grup i 62 zweryfikowane wpisy nomenklaturowe.
@@ -23,7 +23,7 @@
 - Wszystkie odnośniki sprzedażowe są kotwicami wewnętrznymi; brak zewnętrznego checkoutu i trackerów.
 - Konsola: 0 błędów w teście.
 - Zasoby strony: lokalne style/skrypty, dwa responsywne mockupy WebP z kanałem alfa, 12 zoptymalizowanych podglądów WebP i `og.jpg`.
-- Waga kompletnego buildu produkcyjnego: 707 571 bajtów; obrazy poniżej pierwszego ekranu korzystają z leniwego ładowania.
+- Waga kompletnego buildu produkcyjnego: 834 232 bajty; obrazy poniżej pierwszego ekranu korzystają z leniwego ładowania.
 
 ## Integralność źródła
 
