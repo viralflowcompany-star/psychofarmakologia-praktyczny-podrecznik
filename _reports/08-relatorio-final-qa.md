@@ -18,7 +18,7 @@
 
 - Desktop 1265×900: brak poziomego przepełnienia; okładka, rozkładówka i 12 przetłumaczonych stron są załadowane.
 - Mobile 390×844: brak poziomego przepełnienia; wszystkie obrazy są załadowane, a podglądy stron układają się responsywnie.
-- Makiety rozmów: po 4 wiadomości, osobne godziny/statusy, 3 poprawnie załadowane awatary; brak błędów konsoli.
+- Makiety rozmów: po 12 krótkich wiadomości z naturalnym rytmem, osobnymi godzinami, nagłówkiem wzorowanym na WhatsAppie i 3 poprawnie załadowanymi syntetycznymi awatarami.
 - CTA główne: klikalne; pokazuje lokalny komunikat o przyszłej integracji płatności.
 - Wszystkie odnośniki sprzedażowe są kotwicami wewnętrznymi; brak zewnętrznego checkoutu i trackerów.
 - Konsola: 0 błędów w teście.
