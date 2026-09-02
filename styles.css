@@ -3,6 +3,8 @@
   --blue-2:#071499;
   --green:#347c3b;
   --green-bright:#57b957;
+  --cta-green:#55d67d;
+  --cta-green-dark:#248c49;
   --red:#d40000;
   --pale:#f7fff6;
   --ink:#171717;
@@ -27,11 +29,13 @@ a{color:inherit}
 
 .top-offer{padding:0 0 42px;text-align:center;background:#fff}
 .compact-copy{max-width:920px}
-.button{display:inline-flex;align-items:center;justify-content:center;min-height:36px;padding:8px 20px;color:#fff;border:0;border-radius:18px;text-align:center;text-decoration:none;font-size:16px;font-weight:800;line-height:1.15;box-shadow:inset 0 -2px rgba(0,0,0,.18);transition:transform .15s ease,filter .15s ease}
-.button:hover{filter:brightness(1.08);transform:translateY(-1px)}
+.button{display:inline-flex;align-items:center;justify-content:center;min-height:36px;padding:8px 20px;color:#07391d;border:1px solid rgba(13,104,52,.28);border-radius:18px;text-align:center;text-decoration:none;font-size:16px;font-weight:800;line-height:1.15;transition:transform .15s ease,filter .15s ease,box-shadow .15s ease}
+.button:hover{filter:brightness(1.04);transform:translateY(-2px)}
+.button:active{transform:translateY(2px)}
 .button:focus-visible,.back-to-top:focus-visible{outline:3px solid #f3b500;outline-offset:3px}
-.button-blue{background:var(--blue)}
-.button-red{background:var(--red)}
+.button-cta{background:var(--cta-green);box-shadow:0 6px 0 var(--cta-green-dark),0 12px 24px rgba(36,140,73,.3),inset 0 1px rgba(255,255,255,.55)}
+.button-cta:hover{box-shadow:0 7px 0 var(--cta-green-dark),0 15px 28px rgba(36,140,73,.34),inset 0 1px rgba(255,255,255,.65)}
+.button-cta:active{box-shadow:0 2px 0 var(--cta-green-dark),0 6px 12px rgba(36,140,73,.24),inset 0 1px rgba(255,255,255,.45)}
 .button-small{font-size:14px}
 .price-line{margin:10px 0 10px;font-family:Georgia,"Times New Roman",serif;font-size:20px}
 .price-line strong{font-size:23px}
