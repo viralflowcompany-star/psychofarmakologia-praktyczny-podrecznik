@@ -7,7 +7,8 @@
   <meta name="description" content="Potwierdzenie zakupu i dostęp do cyfrowego wydania Praktycznego Podręcznika Psychofarmakologii.">
   <meta name="robots" content="noindex,nofollow">
   <meta name="theme-color" content="#020b78">
-  <link rel="preload" as="image" href="../images/mockup-cyfrowy-transparente-720.webp" fetchpriority="high">
+  <link rel="preload" as="image" href="../images/hero-psychofarmakologia-mobile-pl-transparente-700.webp" media="(max-width: 760px)" fetchpriority="high">
+  <link rel="preload" as="image" href="../images/hero-psychofarmakologia-pl-transparente-720.webp" media="(min-width: 761px)" fetchpriority="high">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23020b78'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Georgia' font-size='28' font-weight='700' fill='white'%3ERx%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="../dziekujemy.css">
 </head>
@@ -17,14 +18,17 @@
   <main id="main" class="thank-you-shell">
     <article class="thank-you-card" aria-labelledby="thank-you-title">
       <div class="product-panel" aria-label="Praktyczny Podręcznik Psychofarmakologii — wydanie cyfrowe">
-        <img
-          src="../images/mockup-cyfrowy-transparente-720.webp"
-          width="720"
-          height="593"
-          alt="Cyfrowe wydanie Praktycznego Podręcznika Psychofarmakologii na urządzeniach"
-          decoding="async"
-          fetchpriority="high"
-        >
+        <picture>
+          <source media="(max-width: 760px)" srcset="../images/hero-psychofarmakologia-mobile-pl-transparente-700.webp">
+          <img
+            src="../images/hero-psychofarmakologia-pl-transparente-720.webp"
+            width="720"
+            height="593"
+            alt="Podręcznik Psychofarmakologii otoczony kartami leków, receptą, blistrem, modelem mózgu i stetoskopem"
+            decoding="async"
+            fetchpriority="high"
+          >
+        </picture>
       </div>
 
       <div class="confirmation-panel">

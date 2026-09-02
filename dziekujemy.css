@@ -72,6 +72,12 @@ img,svg{display:block}
     linear-gradient(150deg,var(--navy),var(--navy-dark));
 }
 
+.product-panel picture{
+  width:100%;
+  display:grid;
+  place-items:center;
+}
+
 .product-panel img{
   width:min(100%,440px);
   height:auto;
