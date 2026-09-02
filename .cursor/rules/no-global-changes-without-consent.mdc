@@ -1,0 +1,11 @@
+---
+description: Exige autorização explícita antes de qualquer alteração global
+alwaysApply: true
+---
+
+# Alterações globais exigem consentimento
+
+- Nunca aplique alterações globais, em todo o site, em todos os funis, em todo o WordPress ou em configurações compartilhadas sem autorização explícita do usuário.
+- Por padrão, limite qualquer mudança somente à página, checkout, funil, rota, componente ou arquivo solicitado.
+- Antes de ampliar o escopo, informe exatamente o que seria afetado e peça autorização.
+- Quando possível, use seletores, IDs e configurações específicos para impedir efeitos em outras páginas.

@@ -1,0 +1,238 @@
+<!-- Checkout limpo para o widget HTML do Elementor/FunnelKit -->
+<style>
+  body.elementor-page-856 {
+    background: #f7f9fc;
+  }
+
+  body.elementor-page-856 .elementor-element-97cf2c6 {
+    width: min(100%, 1140px) !important;
+    max-width: 1140px !important;
+    min-height: auto !important;
+    margin: 0 auto !important;
+    padding: 18px 18px 8px !important;
+  }
+
+  body.elementor-page-856 .elementor-element-97cf2c6 img {
+    width: 100% !important;
+    height: auto !important;
+    border-radius: 18px;
+  }
+
+  body.elementor-page-856 .elementor-element-dd59359 {
+    width: 100% !important;
+    max-width: none !important;
+    padding: 0 !important;
+    background: transparent !important;
+  }
+
+  body.elementor-page-856 .elementor-element-a9d3d54 {
+    width: 100% !important;
+    max-width: none !important;
+  }
+
+  .pf-checkout-clean {
+    width: min(100%, 790px);
+    margin: 0 auto;
+    padding: 18px 16px 50px;
+    color: #14213d;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .pf-checkout-clean .wfacp-form,
+  .pf-checkout-clean .wfacp_main_form,
+  .pf-checkout-clean form.checkout {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-inline: auto !important;
+  }
+
+  .pf-checkout-clean .wfacp-section,
+  .pf-checkout-clean .wfacp_main_form .wfacp-form-control-wrapper {
+    border-radius: 10px;
+  }
+
+  .pf-checkout-clean input[type="text"],
+  .pf-checkout-clean input[type="email"],
+  .pf-checkout-clean input[type="tel"],
+  .pf-checkout-clean select,
+  .pf-checkout-clean textarea {
+    min-height: 48px !important;
+    border-color: #cdd5e5 !important;
+    border-radius: 8px !important;
+  }
+
+  .pf-checkout-clean #place_order,
+  .pf-checkout-clean button[type="submit"] {
+    min-height: 58px !important;
+    color: #fff !important;
+    background: #16883a !important;
+    border: 0 !important;
+    border-radius: 10px !important;
+    box-shadow: 0 12px 24px rgba(22, 136, 58, .2) !important;
+    font-size: 17px !important;
+    font-weight: 800 !important;
+  }
+
+  .pf-checkout-clean #place_order:hover,
+  .pf-checkout-clean button[type="submit"]:hover {
+    background: #116d2e !important;
+  }
+
+  .pf-checkout-clean .wfob_sec_start {
+    margin: 16px 0 !important;
+    overflow: hidden;
+    border: 1px solid #d7def0 !important;
+    border-radius: 12px !important;
+    background: #fff !important;
+    box-shadow: 0 8px 22px rgba(20, 33, 61, .06);
+  }
+
+  .pf-checkout-clean .wfob_title_wrap,
+  .pf-checkout-clean .wfob_bgBox_table {
+    background: #edf2ff !important;
+  }
+
+  .pf-checkout-clean .wfob_title {
+    color: #14213d !important;
+    font-size: 14px !important;
+    font-weight: 800 !important;
+    line-height: 1.4 !important;
+  }
+
+  .pf-checkout-clean .wfob_title span {
+    color: #020b78 !important;
+  }
+
+  .pf-checkout-clean .wfob_content_sec,
+  .pf-checkout-clean .wfob_bump_wrapper {
+    background: #fff !important;
+  }
+
+  .pf-checkout-trust {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 18px 0 0;
+  }
+
+  .pf-checkout-trust__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 56px;
+    padding: 10px 12px;
+    color: #24304a;
+    background: #fff;
+    border: 1px solid #dce3ef;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.35;
+    text-align: left;
+  }
+
+  .pf-checkout-trust__item svg {
+    width: 23px;
+    height: 23px;
+    flex: 0 0 23px;
+    color: #16883a;
+  }
+
+  .pf-checkout-copyright {
+    margin: 22px 0 0;
+    color: #727b8e;
+    font-size: 11px;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  @media (max-width: 767px) {
+    body.elementor-page-856 .elementor-element-97cf2c6 {
+      padding: 8px 8px 0 !important;
+    }
+
+    body.elementor-page-856 .elementor-element-97cf2c6 img {
+      border-radius: 10px;
+    }
+
+    .pf-checkout-clean {
+      padding: 12px 10px 32px;
+    }
+
+    .pf-checkout-clean .wfacp_main_form,
+    .pf-checkout-clean form.checkout {
+      padding-inline: 0 !important;
+    }
+
+    .pf-checkout-clean .wfob_title {
+      font-size: 13px !important;
+    }
+
+    .pf-checkout-trust {
+      grid-template-columns: 1fr;
+    }
+
+    .pf-checkout-trust__item {
+      justify-content: flex-start;
+      min-height: 50px;
+    }
+  }
+</style>
+
+<div class="pf-checkout-clean">
+  [wfacp_gutenberg_checkout_form uniqueID=ac36544b]
+
+  <div class="pf-checkout-trust" aria-label="Bezpieczne zakupy">
+    <div class="pf-checkout-trust__item">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.2 4.2L19 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      <span>30-dniowa gwarancja zwrotu pieniędzy</span>
+    </div>
+    <div class="pf-checkout-trust__item">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v12H4zM4 7l8 6 8-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      <span>Natychmiastowy dostęp po płatności</span>
+    </div>
+    <div class="pf-checkout-trust__item">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 5 6v5c0 4.4 2.8 8.1 7 10 4.2-1.9 7-5.6 7-10V6l-7-3Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path></svg>
+      <span>Bezpieczna i szyfrowana płatność</span>
+    </div>
+  </div>
+
+  <p class="pf-checkout-copyright">© 2026 Digital Select. Wszelkie prawa zastrzeżone.</p>
+</div>
+
+<script>
+  (function () {
+    var bumpTitles = {
+      wfob_wrapper_858: '<span>Tak!</span> Dodaj Atlas Monitorowania Laboratoryjnego do mojego zamówienia',
+      wfob_wrapper_859: '<span>Tak!</span> Dodaj Bank Przypadków Klinicznych do mojego zamówienia',
+      wfob_wrapper_860: '<span>Tak!</span> Dodaj Psychofarmakologię Dzieci i Młodzieży do mojego zamówienia'
+    };
+
+    function applyCheckoutFixes() {
+      Object.keys(bumpTitles).forEach(function (id) {
+        var label = document.querySelector('#' + id + ' .wfob_title');
+        if (label && label.innerHTML !== bumpTitles[id]) {
+          label.innerHTML = bumpTitles[id];
+        }
+      });
+
+      var privacyText = document.querySelector('.wfacp-payment-dec');
+      if (privacyText) {
+        privacyText.textContent = 'Szanujemy Twoją prywatność i chronimy Twoje dane.';
+      }
+
+      document.title = 'Finalizacja zamówienia – Praktyczny Podręcznik Psychofarmakologii';
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', applyCheckoutFixes);
+    } else {
+      applyCheckoutFixes();
+    }
+
+    if (window.jQuery) {
+      window.jQuery(document.body).on('updated_checkout', applyCheckoutFixes);
+    }
+  })();
+</script>
