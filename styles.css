@@ -165,3 +165,43 @@ a{color:inherit}
 }
 @media(max-width:390px){.translated-pages-grid,.pages-collage{grid-template-columns:1fr}.translated-pages-grid img,.mini-page{width:min(250px,100%);justify-self:center}.mini-page{min-height:310px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}}
+
+/* WhatsApp-style conversation screenshots */
+.whatsapp-grid{display:block;max-width:760px;margin:0 auto;padding:0}
+.phone-chat{width:100%;max-width:760px;margin:0 auto 34px;border:1px solid #ddd6cd;border-radius:10px;overflow:hidden;background:#efe7de;box-shadow:0 6px 18px rgba(0,0,0,.12);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+.phone-chat:last-child{margin-bottom:0}
+.phone-chat header{display:flex;align-items:center;gap:12px;min-height:72px;padding:10px 14px;background:#075e54;color:#fff}
+.phone-chat header .back-arrow{display:grid;place-items:center;flex:0 0 auto;color:#fff;font-size:0;transform:none}
+.phone-chat header img{width:52px;height:52px;border-radius:50%;border:0;object-fit:cover;flex:0 0 auto}
+.contact-meta strong{font-size:17px;font-weight:600;letter-spacing:.1px}
+.contact-meta small{color:#cfe6e0;font-size:12px}
+.header-icons{display:flex;align-items:center;gap:16px;color:#fff;letter-spacing:normal;font-size:0}
+.header-icons svg{display:block}
+.chat{display:flex;flex-direction:column;padding:18px 14px 22px;background-color:#efe6dd;background-image:radial-gradient(circle at 18% 22%,rgba(0,0,0,.035) 0 1.2px,transparent 1.6px),radial-gradient(circle at 68% 58%,rgba(0,0,0,.03) 0 1.2px,transparent 1.6px),radial-gradient(circle at 42% 82%,rgba(0,0,0,.025) 0 1px,transparent 1.4px);background-size:38px 38px,52px 52px,64px 64px}
+.chat .bubble{max-width:76%;width:auto;margin:0 0 3px;padding:7px 58px 7px 10px;border-radius:8px;box-shadow:0 1px .5px rgba(11,20,26,.13);font-size:15px;line-height:1.34;color:#111b21;white-space:normal;overflow-wrap:anywhere}
+.chat .bubble.in{align-self:flex-start;margin-left:8px;background:#fff;border-top-left-radius:0}
+.chat .bubble.out{align-self:flex-end;margin:10px 8px 3px auto;background:#d9fdd3;border-top-right-radius:0}
+.chat .bubble.in+.bubble.out,.chat .bubble.out+.bubble.in{margin-top:10px}
+.bubble time{right:9px;bottom:5px;color:rgba(17,27,33,.45);font-size:11px}
+.ticks{color:#53bdeb;letter-spacing:-1px;font-weight:700}
+@media(max-width:680px){
+  .whatsapp-grid{padding:0}
+  .phone-chat{width:100%;max-width:none;border-radius:8px;margin-bottom:26px}
+  .phone-chat header{min-height:76px;gap:12px;padding:10px 12px}
+  .phone-chat header img{width:54px;height:54px}
+  .contact-meta strong{font-size:16px}
+  .contact-meta small{font-size:12px}
+  .header-icons{gap:12px;font-size:0;letter-spacing:normal}
+  .chat{padding:16px 10px 20px}
+  .chat .bubble{max-width:84%;font-size:16px;padding-right:56px}
+}
+@media(max-width:420px){
+  .phone-chat header{gap:8px;padding:9px 8px;min-height:74px}
+  .phone-chat header .back-arrow svg{width:22px;height:22px}
+  .phone-chat header img{width:52px;height:52px;flex:0 0 52px}
+  .contact-meta{flex:1 1 auto;min-width:0}
+  .contact-meta strong{font-size:16px}
+  .contact-meta small{font-size:11px}
+  .header-icons{gap:9px;flex:0 0 auto}
+  .header-icons svg{width:20px;height:20px}
+}
