@@ -1,0 +1,304 @@
+<!--
+  FUNNELKIT — PÁGINA DE OBRIGADO
+  Antes de publicar, substitua LINK_DO_SEU_PDF_AQUI pelo link real do produto.
+  Cole todo este arquivo em um bloco/widget "HTML personalizado" do FunnelKit.
+-->
+
+<style>
+  .pfk-thankyou,
+  .pfk-thankyou * {
+    box-sizing: border-box;
+  }
+
+  .pfk-thankyou {
+    --pfk-navy: #020b78;
+    --pfk-green: #2da23a;
+    --pfk-green-dark: #23812d;
+    --pfk-ink: #13213a;
+    --pfk-muted: #687083;
+    --pfk-paper: #fffdfa;
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 48px 24px;
+    color: var(--pfk-ink);
+    background:
+      radial-gradient(circle at 8% 8%, rgba(2, 11, 120, .07), transparent 28rem),
+      radial-gradient(circle at 92% 92%, rgba(45, 162, 58, .09), transparent 30rem),
+      #f5f1e8;
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .pfk-thankyou__card {
+    width: min(100%, 980px);
+    display: grid;
+    grid-template-columns: minmax(0, 44fr) minmax(0, 56fr);
+    overflow: hidden;
+    background: var(--pfk-paper);
+    border: 1px solid rgba(19, 33, 58, .08);
+    border-radius: 28px;
+    box-shadow: 0 24px 64px rgba(33, 36, 54, .14);
+  }
+
+  .pfk-thankyou__product {
+    min-height: 620px;
+    display: grid;
+    place-items: center;
+    padding: 50px 30px;
+    border-right: 1px solid rgba(19, 33, 58, .08);
+  }
+
+  .pfk-thankyou__product picture {
+    width: 100%;
+    display: grid;
+    place-items: center;
+  }
+
+  .pfk-thankyou__product img {
+    display: block;
+    width: min(100%, 440px);
+    height: auto;
+    filter: drop-shadow(0 18px 22px rgba(19, 33, 58, .14));
+  }
+
+  .pfk-thankyou__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 62px 72px;
+  }
+
+  .pfk-thankyou__product-name {
+    margin: 0 0 26px;
+    color: var(--pfk-navy);
+    font: 700 18px/1.35 Georgia, "Times New Roman", serif;
+  }
+
+  .pfk-thankyou__success {
+    width: 66px;
+    height: 66px;
+    display: grid;
+    place-items: center;
+    margin-bottom: 26px;
+    color: #fff;
+    background: var(--pfk-green);
+    border-radius: 50%;
+    box-shadow: 0 12px 28px rgba(45, 162, 58, .24);
+  }
+
+  .pfk-thankyou__success svg {
+    display: block;
+    width: 36px;
+    height: 36px;
+  }
+
+  .pfk-thankyou__eyebrow {
+    margin: 0 0 12px;
+    color: #b96a17;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+  }
+
+  .pfk-thankyou__title {
+    margin: 0;
+    color: #092f25;
+    font: 700 clamp(44px, 5vw, 62px)/.98 Georgia, "Times New Roman", serif;
+    letter-spacing: -.035em;
+  }
+
+  .pfk-thankyou__intro {
+    max-width: 440px;
+    margin: 26px 0 30px;
+    color: #596174;
+    font-size: 17px;
+    line-height: 1.7;
+  }
+
+  .pfk-thankyou__button {
+    width: 100%;
+    min-height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px 24px;
+    color: #fff !important;
+    background: var(--pfk-green);
+    border-radius: 999px;
+    box-shadow: 0 13px 26px rgba(45, 162, 58, .2);
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 1.2;
+    text-align: center;
+    text-decoration: none !important;
+    transition: transform .18s ease, background .18s ease, box-shadow .18s ease;
+  }
+
+  .pfk-thankyou__button:hover {
+    color: #fff !important;
+    background: var(--pfk-green-dark);
+    box-shadow: 0 16px 30px rgba(45, 162, 58, .25);
+    transform: translateY(-2px);
+  }
+
+  .pfk-thankyou__button:focus-visible {
+    outline: 3px solid rgba(2, 11, 120, .28);
+    outline-offset: 4px;
+  }
+
+  .pfk-thankyou__button svg {
+    display: block;
+    width: 21px;
+    height: 21px;
+    flex: 0 0 21px;
+  }
+
+  .pfk-thankyou__note {
+    align-self: center;
+    max-width: 360px;
+    margin: 18px 0 0;
+    color: var(--pfk-muted);
+    font-size: 12px;
+    line-height: 1.55;
+    text-align: center;
+  }
+
+  @media (max-width: 760px) {
+    .pfk-thankyou {
+      min-height: auto;
+      padding: 18px 14px;
+    }
+
+    .pfk-thankyou__card {
+      grid-template-columns: 1fr;
+      border-radius: 22px;
+    }
+
+    .pfk-thankyou__product {
+      min-height: auto;
+      padding: 24px 20px 18px;
+      border-right: 0;
+      border-bottom: 1px solid rgba(19, 33, 58, .08);
+    }
+
+    .pfk-thankyou__product img {
+      width: min(100%, 360px);
+    }
+
+    .pfk-thankyou__content {
+      align-items: center;
+      padding: 34px 24px 30px;
+      text-align: center;
+    }
+
+    .pfk-thankyou__product-name {
+      margin-bottom: 18px;
+      font-size: 16px;
+    }
+
+    .pfk-thankyou__success {
+      width: 58px;
+      height: 58px;
+      margin-bottom: 20px;
+    }
+
+    .pfk-thankyou__success svg {
+      width: 31px;
+      height: 31px;
+    }
+
+    .pfk-thankyou__eyebrow {
+      font-size: 10px;
+    }
+
+    .pfk-thankyou__title {
+      font-size: clamp(38px, 12vw, 48px);
+    }
+
+    .pfk-thankyou__intro {
+      margin: 20px 0 24px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .pfk-thankyou__button {
+      min-height: 56px;
+      padding: 14px 20px;
+    }
+  }
+
+  @media (max-width: 390px) {
+    .pfk-thankyou {
+      padding: 10px;
+    }
+
+    .pfk-thankyou__content {
+      padding-inline: 18px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .pfk-thankyou__button {
+      transition: none;
+    }
+  }
+</style>
+
+<section class="pfk-thankyou" lang="pl-PL" aria-labelledby="pfk-thankyou-title">
+  <div class="pfk-thankyou__card">
+    <div class="pfk-thankyou__product" aria-label="Praktyczny Podręcznik Psychofarmakologii — wydanie cyfrowe">
+      <picture>
+        <source
+          media="(max-width: 760px)"
+          srcset="https://psychopharm-guide-poland.lovable.app/images/hero-psychofarmakologia-mobile-pl-transparente-700.webp"
+        >
+        <img
+          src="https://psychopharm-guide-poland.lovable.app/images/hero-psychofarmakologia-pl-transparente-720.webp"
+          width="720"
+          height="593"
+          alt="Podręcznik Psychofarmakologii otoczony kartami leków, receptą, blistrem, modelem mózgu i stetoskopem"
+          decoding="async"
+        >
+      </picture>
+    </div>
+
+    <div class="pfk-thankyou__content">
+      <p class="pfk-thankyou__product-name">Praktyczny Podręcznik Psychofarmakologii</p>
+
+      <div class="pfk-thankyou__success" aria-hidden="true">
+        <svg viewBox="0 0 24 24">
+          <path d="m5 12.5 4.2 4.2L19 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+      </div>
+
+      <p class="pfk-thankyou__eyebrow">Płatność zakończona pomyślnie</p>
+      <h1 class="pfk-thankyou__title" id="pfk-thankyou-title">Dziękujemy<br>za zakup!</h1>
+
+      <p class="pfk-thankyou__intro">
+        Twój podręcznik jest gotowy. Kliknij przycisk poniżej, aby pobrać materiały i zacząć korzystać z wydania cyfrowego.
+      </p>
+
+      <!-- SUBSTITUA LINK_DO_SEU_PDF_AQUI PELO LINK REAL DO PRODUTO -->
+      <a
+        class="pfk-thankyou__button"
+        href="LINK_DO_SEU_PDF_AQUI"
+        target="_blank"
+        rel="noopener"
+      >
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 3v12m0 0 4-4m-4 4-4-4M5 20h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+        Pobierz materiały
+      </a>
+
+      <p class="pfk-thankyou__note">
+        Zachowaj tę stronę, aby w razie potrzeby móc ponownie pobrać plik.
+      </p>
+    </div>
+  </div>
+</section>
