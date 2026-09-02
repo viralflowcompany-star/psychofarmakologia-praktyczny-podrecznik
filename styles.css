@@ -150,12 +150,12 @@ a{color:inherit}
 @media(max-width:680px){
   .page-width{width:min(100% - 28px,1120px)}
   .hero-mockup{width:100%}
-  .top-offer{padding-bottom:32px}.button{width:min(100%,380px);font-size:14px}.dash-list{font-size:12px}.price-line{font-size:18px}
+  .top-offer{padding-bottom:32px}.button{width:min(100%,380px);min-height:48px;padding:12px 20px;font-size:14px}.dash-list{font-size:12px}.price-line{font-size:18px}
   .benefits{padding:48px 0 58px}.benefit-headings,.benefit-grid{grid-template-columns:1fr;gap:24px}.benefit-headings h2{font-size:23px}.product-spread{order:1}.reason-column{order:2;padding:0}.green-checks{font-size:14px}
   .section-bar{font-size:18px;padding:8px 10px}
   .pages-section{padding:20px 0 60px}.translated-pages-grid{grid-template-columns:repeat(2,1fr);gap:12px;padding:0}.pages-collage{grid-template-columns:repeat(2,1fr);gap:12px;padding:0}.mini-page{min-height:250px;padding:15px 12px}.mini-page h3{font-size:15px}.mini-page.cover h3{font-size:19px}.mini-page.chapter>span{font-size:44px}
   .content-columns{grid-template-columns:1fr;gap:18px}.content-column{gap:16px}.contents{padding-bottom:44px}
-  .testimonials{padding:48px 0 60px}.whatsapp-grid{grid-template-columns:1fr;padding:0 4px}.phone-chat{width:min(420px,100%);justify-self:center}
+  .testimonials{padding:48px 0 60px}.whatsapp-grid{grid-template-columns:1fr;padding:0 4px}.phone-chat{width:min(420px,100%);justify-self:center}.phone-chat header{gap:7px;padding-inline:9px}.contact-meta strong{font-size:15px}.contact-meta small{font-size:10px}.header-icons{font-size:15px;letter-spacing:2px}
   .about{padding:52px 0 36px}.about h2{font-size:19px}.brand-mark{width:120px;height:120px}.brand-mark span{font-size:42px}
   .back-to-top{display:none}
 }
